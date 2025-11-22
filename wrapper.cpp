@@ -113,7 +113,7 @@ void quickSortWrapper(std::vector<T>& data){
 	}
 }
 //countingSort
-void countionSort(std::vector<int>& data,int n){
+void countingSort(std::vector<int>& data,int n){
 	int max_val = data[0];
 	for(int i = 1;i < n;i++){
 		if(data[i] > max_val){
@@ -248,6 +248,11 @@ int main(){
 	showData(testData_string5);
 	checkTime(quickSortWrapper,testData_string5,"quickSort");
 	showData(testData_string5);
+//6
+	std::vector<int> testData_int6 = createData_int(input_number);
+	showData(testData_int6);
+	checkTime(countingSortWrapper,testData_int6,"countingSort");
+	showData(testData_int6);
 
 
 	return 0;
