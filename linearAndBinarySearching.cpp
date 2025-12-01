@@ -24,7 +24,9 @@ void bubbleSort(std::vector<T>& data){
 		if(!swapped) break;
 	}
 }
+/*
 
+*/
 //2.selectionSortShifting
 template<typename T>
 void selectionSortShifting(std::vector<T>& data){
@@ -45,7 +47,9 @@ void selectionSortShifting(std::vector<T>& data){
 		}
 	}
 }
+/*
 
+*/
 //3.selectionSortSwap
 template<typename T>
 void selectionSortSwap(std::vector<T>& data){
@@ -60,7 +64,9 @@ void selectionSortSwap(std::vector<T>& data){
 		if(min_index != i) std::swap(data[i],data[min_index]);
 	}
 }
+/*
 
+*/
 //4.insertionSort
 template<typename T>
 void insertionSort(std::vector<T>& data){
@@ -78,7 +84,9 @@ void insertionSort(std::vector<T>& data){
 		data[insertIndex] = current_value;
 	}
 }
+/*
 
+*/
 //5.quickSort
 template<typename T>
 void quickSort(std::vector<T>& data,int low,int high);
@@ -113,9 +121,12 @@ void quickSortWrapper(std::vector<T>& data){
 		quickSort(data,0,data.size()-1);
 	}
 }
+/*
 
+*/
 //6.countinSort
-void countingSort(std::vector<int>& data,int n){
+void countingSort(std::vector<int>& data){
+	int n = data.size();
 	int max_val = data[0];
 	for(int i = 1;i < n;i++){
 		if(data[i] > max_val){
@@ -134,13 +145,9 @@ void countingSort(std::vector<int>& data,int n){
 		}
 	}
 }
-void countingSortWrapper(std::vector<int>& data){
-	if(!data.empty()){
-		int n = data.size();
-		countingSort(data,n);
-	}
-}
+/*
 
+*/
 //7.radixSort
 void countingSortByDigit(std::vector<int>& data,int exp){
 	int n = data.size();
@@ -168,10 +175,9 @@ void radixSort(std::vector<int>& data){
 		countingSortByDigit(data,exp);
 	}
 }
-void radixSortWrapper(std::vector<int>& data){
-	radixSort(data);
-}
+/*
 
+*/
 //8.mergeSort
 void mergeSort(std::vector<double>& data,int start,int end);
 void merge(std::vector<double>& data,int start,int mid,int end);
@@ -221,7 +227,9 @@ void mergeSortWrapper(std::vector<double>& data){
 		mergeSort(data,0,data.size()-1);
 	}
 }
+/*
 
+*/
 //9.iterativeMergeSort
 void merge01(double left[], int leftSize, double right[], int rightSize, double result[]) {
     int i = 0, j = 0, k = 0;
@@ -243,7 +251,7 @@ void merge01(double left[], int leftSize, double right[], int rightSize, double 
     }
 }
 
-void mergeSort01(std::vector<double>& arr) {
+void iterativeMergeSort(std::vector<double>& arr) {
     int length = arr.size();
     if (length <= 1) return;
 
@@ -266,11 +274,9 @@ void mergeSort01(std::vector<double>& arr) {
         }
     }
 }
+/*
 
-void iterativeMergeSortWrapper(std::vector<double>& data) {
-    mergeSort01(data);
-}
-
+*/
 //10.linearSearch
 int linearSearch(std::vector<int>& data,int targetVal){
 	for(int i = 0;i < data.size();i++){
@@ -410,11 +416,11 @@ int main(){
 //	showData(testData_string5);
 //6
 	std::vector<int> testData_int6 = createData_int(input_number);
-	checkTime(countingSortWrapper,testData_int6,"countingSort");
+	checkTime(countingSort,testData_int6,"countingSort");
 //	showData(testData_int6);
 //7
 	std::vector<int> testData_int7 = createData_int(input_number);
-	checkTime(radixSortWrapper,testData_int7,"radixSort");
+	checkTime(radixSort,testData_int7,"radixSort");
 //	showData(testData_int7);
 //8
 	std::vector<double> testData_double8 = createData_double(input_number);
@@ -422,12 +428,11 @@ int main(){
 //	showData(testData_double8);
 //9
 	std::vector<double> testData_double9 = createData_double(input_number);
-	checkTime(iterativeMergeSortWrapper,testData_double9,"iterativeMergeSort");
+	checkTime(iterativeMergeSort,testData_double9,"iterativeMergeSort");
 //	showData(testData_double9);
 //10
 	std::vector<int> testData_int10 = createData_int(input_number);
-	countingSort(testData_int10,testData_int10.size());
-	showData(testData_int10);
+	countingSort(testData_int10);
 	auto start1 = std::chrono::steady_clock::now();
 	int search_indexOfValue1 = linearSearch(testData_int10,target_value);
 	auto end1 = std::chrono::steady_clock::now();
