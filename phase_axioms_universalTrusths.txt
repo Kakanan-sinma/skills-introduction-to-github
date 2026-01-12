@@ -8,7 +8,7 @@ I see what you mean.
 Make yourself at home.
 Long story short...
 It's not a big deal.
-It works on my machine
+It works on my machine.
 There is a bug in the code.
 Could you explain that again?
 Actions speak louder than words.
@@ -19,7 +19,7 @@ Nothing lasts forever.
 Change is the only constant.
 What goes around,comes around.
 Time waits for no one.
-Experience is the best teacer.
+Experience is the best teacher.
 Every cloud a silver lining.
 Mistakes are the portals of discovery.
 Rome wasn't built in a day.
@@ -30,7 +30,7 @@ Where there's a will,there's a way.
 The devil is in the details.
 Don't count your chickens before they hatch.
 Expect the best,prepare for the worst.
-Failure is not the opposite of success;it's part of success.
+Failure is not the opposite of success,it's part of success.
 Smooth seas do not make skillful sailors.
 You can't please everyone.
 Honesty is the best policy.
@@ -51,3 +51,4 @@ Silence is golden.
 Health is wealth.
 You are what you eat.
 Age is just a number.
+
