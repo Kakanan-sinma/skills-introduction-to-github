@@ -28,8 +28,10 @@ private:
         }
 
         int hightRecursive(Node* node){
-                if(node == nullptr) return 0;
-
+                if(node == nullptr) return -1;
+                int leftHight = hightRecursive(node->left);
+                int rightHiht = hightRecursive(node->right);
+                return 1 + std::max(leftHight,rightHight);
         }
 
         Node* findMinRecursive(Node* node){
@@ -38,6 +40,13 @@ private:
                 else return findMinRecursive(node->left);
         }
 
+        Node* findMaxRecursive(Node* node){
+                if(nood == nullptr) return nullptr;
+                if(node->right == nullptr) return node;
+                else return findMaxRecursive(node->right);
+        }
+
+        
 
 public:
         BST():root(nullptr){}
@@ -66,6 +75,10 @@ public:
         int findMin(){
                 if(root == nullptr) return -1;
                 return findMinRecursive(root)->data;
+        }
+        int findMax(){
+                if(root = nullptr) return -1;
+                return findMaxRecursive(root)->data;
         }
 
 };
