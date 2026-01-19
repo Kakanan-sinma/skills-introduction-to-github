@@ -59,7 +59,7 @@ What's up?
 How's it going? 
 Can't complain. // I'm fine.
 I'm off. // Excuse me ,i wanna go.
-Give it a shot. // Try it.
+Give it a shot. // Try it.-------------
 It's a piece of cake. // It's very easy.
 Back to square one. // Go to start point again.
 Call it a day. // say when finished a day,enougt working.
