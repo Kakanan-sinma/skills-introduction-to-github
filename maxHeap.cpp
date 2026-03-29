@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int parent(int i){return (i - 1) / 2;
+int parent(int i){return (i - 1) / 2;}
 int leftChild(int i){return (2 * i) + 1;}
 int rightChild(int i){return (2 * i) + 2;}
 
@@ -21,9 +21,9 @@ void insert(int p, vector<int> &arr){
 void shiftDown(int i, vector<int> &arr, int size){
   int maxIdex = i;
   int l = leftChild(i);
-  if(l < size && arr[maxIndex] < arr[l]) l = maxIndex;
+  if(l < size && arr[maxIndex] < arr[l]) maxIndex = l;
   int r = rightChild(i);
-  if(r < size && arr[maxIndex] < arr[r]) r = maxIndex;
+  if(r < size && arr[maxIndex] < arr[r]) maxIndex = r;
 
   if(maxIndex != i){
     swap(arr[maxIndex], arr[i]);
